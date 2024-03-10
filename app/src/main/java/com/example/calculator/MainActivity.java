@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         num2 = (EditText) findViewById(R.id.txtNum2);
         addition = (Button) findViewById(R.id.btnAdd);
         subtraction = (Button) findViewById(R.id.btnSub);
+        multiplication = (Button) findViewById(R.id.btnMultiply);
         addition.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -47,6 +48,18 @@ public class MainActivity extends AppCompatActivity {
                 double myNum2 = Double.parseDouble(num2.getText().toString());
                 double dif = myNum1 - myNum2;
                 result.setText(String.valueOf(dif));
+            }
+        });
+
+        multiplication.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//String input1 = num1.getText().toString();
+//int number = Integer.parseInt(input1);
+                double myNum1 = Double.parseDouble(num1.getText().toString());
+                double myNum2 = Double.parseDouble(num2.getText().toString());
+                double sum = myNum1 * myNum2;
+                result.setText(String.valueOf(sum));
             }
         });
     }
